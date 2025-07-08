@@ -1,13 +1,31 @@
 {
   "canisters": {
-    "btc_loan_dapp_backend": {
-      "candid": "src/btc_loan_dapp_backend/btc_loan_dapp_backend.did",
-      "package": "btc_loan_dapp_backend",
+    "loan_canister": {
+      "candid": "src/btc_loan_dapp_backend/loan_canister/loan_canister.did",
+      "package": "loan_canister",
+      "type": "rust"
+    },
+    "mock_ckbtc": {
+      "candid": "src/btc_loan_dapp_backend/mock_ckbtc/mock_ckbtc.did",
+      "package": "mock_ckbtc",
+      "type": "rust"
+    },
+    "mock_iusd": {
+      "candid": "src/btc_loan_dapp_backend/mock_iusd/mock_iusd.did",
+      "package": "mock_iusd",
+      "type": "rust"
+    },
+    "oracle_canister": {
+      "candid": "src/btc_loan_dapp_backend/oracle_canister/oracle_canister.did",
+      "package": "oracle_canister",
       "type": "rust"
     },
     "btc_loan_dapp_frontend": {
       "dependencies": [
-        "btc_loan_dapp_backend"
+        "loan_canister",
+        "mock_ckbtc",
+        "mock_iusd",
+        "oracle_canister"
       ],
       "source": [
         "src/btc_loan_dapp_frontend/dist"

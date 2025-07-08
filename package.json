@@ -14,5 +14,8 @@
   "type": "module",
   "workspaces": [
     "src/btc_loan_dapp_frontend"
-  ]
+  ],
+  "dependencies": {
+    "react-router-dom": "^7.6.3"
+  }
 }

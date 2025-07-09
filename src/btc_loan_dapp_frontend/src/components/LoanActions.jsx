@@ -3,7 +3,7 @@ import './LoanActions.css';
 import initActors from './canisterConnection';
 import { useAuth } from '../auth/AuthProvider';
 import { Principal } from '@dfinity/principal';
-import { canisterId as loanId } from '../declarations/loan_canister';
+import { canisterId as loanId } from '../../../declarations/loan_canister';
 
 const LoanActions = () => {
   const [actors, setActors] = useState(null);
@@ -23,8 +23,8 @@ const LoanActions = () => {
     const userPrincipal = Principal.fromText(principal);
 
     try {
-      const btc = await actors.ckbtcActor.balanceOf(userPrincipal);
-      const iusd = await actors.iusdActor.balanceOf(userPrincipal);
+      const btc = await actors.ckbtcActor.balance_of(userPrincipal);
+      const iusd = await actors.iusdActor.balance_of(userPrincipal);
       setBtcBalance(Number(btc));
       setIusdBalance(Number(iusd));
     } catch (err) {
@@ -109,3 +109,4 @@ const LoanActions = () => {
 };
 
 export default LoanActions;
+

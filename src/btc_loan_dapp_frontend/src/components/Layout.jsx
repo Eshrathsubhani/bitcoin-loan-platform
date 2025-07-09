@@ -1,4 +1,3 @@
-// src/components/Layout.jsx
 import React from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import Navbar from './Navbar';

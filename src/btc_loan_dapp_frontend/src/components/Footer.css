@@ -1,5 +1,5 @@
 .footer {
-  background: rgba(44, 83, 100, 0.8); /* same as navbar */
+  background: rgba(44, 83, 100, 0.8); 
   backdrop-filter: blur(12px);
   color: #f4f4f4;
   padding: 3rem 2rem 1rem;

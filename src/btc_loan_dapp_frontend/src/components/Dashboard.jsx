@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './Dashboard.css';
 import initActors from "./canisterConnection";
+import { Principal } from "@dfinity/principal"; 
 
 const Dashboard = ({ principal, onLogout }) => {
   const [actors, setActors] = useState(null);
@@ -10,6 +11,7 @@ const Dashboard = ({ principal, onLogout }) => {
   const [price, setPrice] = useState(0);
 
   const shortPrincipal = principal ? `${principal.slice(0, 5)}...${principal.slice(-5)}` : "";
+  const principalObj = Principal.fromText(principal);
 
   useEffect(() => {
     initActors().then(({ loanActor, ckbtcActor, iusdActor, oracleActor }) => {
@@ -24,8 +26,8 @@ const Dashboard = ({ principal, onLogout }) => {
       try {
         const [loanData, btc, iusd, btcPrice] = await Promise.all([
           actors.loanActor.get_loan(),
-          actors.ckbtcActor.balance_of(principal),
-          actors.iusdActor.balance_of(principal),
+          actors.ckbtcActor.balance_of(principalObj),
+          actors.iusdActor.balance_of(principalObj),
           actors.oracleActor.get_price()
         ]);
 
@@ -33,6 +35,7 @@ const Dashboard = ({ principal, onLogout }) => {
         setBtcBalance(Number(btc));
         setIusdBalance(Number(iusd));
         setPrice(Number(btcPrice));
+
       } catch (err) {
         console.error("Failed to fetch dashboard data:", err);
       }
@@ -68,11 +71,12 @@ const Dashboard = ({ principal, onLogout }) => {
         <div className="card slide-in delay-3">
           <h3>🏦 Your Loan</h3>
           {loan ? (
-            <>
-              <p>Deposited BTC: {loan.deposited_btc}</p>
-              <p>Borrowed iUSD: {loan.borrowed_iusd}</p>
-            </>
-          ) : <p>No loan data</p>}
+  <>
+    <p>Deposited BTC: {(Number(loan.deposited_btc))} BTC</p>
+    <p>Borrowed iUSD: {(Number(loan.borrowed_iusd))} iUSD</p>
+  </>
+) : <p>No loan data</p>}
+
         </div>
       </div>
     </main>
@@ -80,3 +84,4 @@ const Dashboard = ({ principal, onLogout }) => {
 };
 
 export default Dashboard;
+

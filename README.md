@@ -1,4 +1,4 @@
-# `btc_loan_dapp`
+# `btc_collat_dapp`
 
 # 🪙 BTCollat – Bitcoin-Backed Decentralized Loan Platform
 

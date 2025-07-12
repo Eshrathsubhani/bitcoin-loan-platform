@@ -1,12 +1,8 @@
-# `btc_collat_dapp`
+# `btc_loan`
 
-# 🪙 BTCollat – Bitcoin-Backed Decentralized Loan Platform
+# 🪙 BTCLoan – Bitcoin-Backed Decentralized Loan Platform
 
-A secure DApp that allows users to **deposit BTC**, **borrow iUSD**, and **manage loans** through a blockchain-powered system built using **Internet Computer canisters**.
-
-## 🎥 Demo Video
-
-▶️ [Click here to watch the BTCollat demo](./media/demoBTCollat.mp4)
+A secure DApp that allows users to **deposit BTC**, **borrow iUSD**, and **manage loans** through a blockchain-powered system built using **Internet Computer canisters**
 
 ## Troubleshooting
 

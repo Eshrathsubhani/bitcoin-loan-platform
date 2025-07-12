@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-section">
-          <h3>BTCollat</h3>
+          <h3>btc_loan</h3>
           <p>Secure your BTC and borrow iUSD instantly. A blockchain-powered decentralized loan solution.</p>
         </div>
 
@@ -32,7 +32,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} BTCollat. All rights reserved.
+        &copy; {new Date().getFullYear()} btc_loan. All rights reserved.
       </div>
     </footer>
   );

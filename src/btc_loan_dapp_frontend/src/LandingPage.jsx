@@ -6,7 +6,7 @@ const LandingPage = ({ onGetStarted }) => {
     return (
         <div className="landing-wrapper">
             <header className="site-header">
-                <div className="logo">BTCollat</div>
+                <div className="logo">BTC_Loan</div>
                 <nav className="nav-links">
                     <a href="#home">Home</a>
                     <a href="#how-it-works">How It Works</a>
@@ -43,7 +43,7 @@ const LandingPage = ({ onGetStarted }) => {
             <section className="description-section" id="how-it-works">
                 <h2>How the Platform Works</h2>
                 <p>
-                    BTC Collateral Hub allows users to take out secure loans against their Bitcoin holdings.
+                    BTC Loan allows users to take out secure loans against their Bitcoin holdings.
                     Your BTC is locked in a smart contract through ICP's native Bitcoin integration,
                     ensuring full transparency and trustless operations.
                     Once deposited, you receive a stable token loan without any need to sell your crypto or go through tedious KYC checks.

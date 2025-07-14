@@ -27,7 +27,7 @@ bower_components
 
 # Build outputs
 build
-dist
+dist/
 out
 .next
 .nuxt
@@ -70,9 +70,6 @@ lib-cov
 !.yarn/sdks
 !.yarn/versions
 
-# System files
-.DS_Store
-
 # Environment files
 .env
 .env.*
@@ -82,6 +79,20 @@ lib-cov
 .env.test.local
 .env.production.local
 
-# Vite logs
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+# System files
+.DS_Store
+**/.DS_Store
+
+# Various IDEs and Editors
+.vscode/
+.idea/
+**/*~
+
+# dfx temporary files
+.dfx/
+
+# Rust build
+target/
+
+# generated files
+**/declarations/

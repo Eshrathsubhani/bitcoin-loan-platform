@@ -1,53 +1,36 @@
-# Bitcoin Loan Platform
+# 🪙 Bitcoin Loan Platform – Decentralized Bitcoin-Backed Loan System
 
-A decentralized finance (DeFi) platform that allows users to take out loans backed by Bitcoin, without needing to sell their BTC. Built on the Internet Computer Protocol (ICP) with secure Internet Identity login.
+A decentralized finance (DeFi) platform that allows users to take out loans backed by Bitcoin, without needing to sell their BTC. Built entirely on the **Internet Computer Protocol (ICP)**, the platform uses **Rust canisters** and **React frontend**, authenticated with Internet Identity.
+
+---
 
 ## 💻 Tech Stack
 
-- React.js (Frontend)
-- ICP Internet Identity for authentication
-- Motoko (Backend smart contracts)
-- REST/Actor model for frontend-backend communication
-- Styled Components & Custom UI
+- 🔐 **ICP Internet Identity** – Secure, passwordless login
+- ⚙️ **Rust Canisters** – Backend smart contracts deployed on the Internet Computer
+- ⚛️ **React.js** – Frontend with real-time UI
+- 🔌 **Candid + dfx + agent-js** – Communication between frontend and backend
+- 📦 **npm workspaces** – Monorepo support for managing frontend/backend together
+
+---
 
 ## 🚀 Features
 
 - Login via Internet Identity (ICP)
-- Request loans with BTC as collateral
+- Request loans using BTC as collateral
 - Repay existing loans
 - Live BTC price feed integration
 - Release collateral upon repayment
 - View transaction history
-- Real-time notifications and error feedback
+- Real-time notifications and error handling
+
+---
 
 ## 🛠️ Getting Started
 
-Clone the repo:
+### 📦 Clone and Setup
 
 ```bash
 git clone https://github.com/Eshrathsubhani/bitcoin-loan-platform.git
-cd bitcoin-loan-platform/frontend
-Install dependencies:
-
-bash
-Copy
-Edit
+cd bitcoin-loan-platform
 npm install
-Run the development server:
-
-bash
-Copy
-Edit
-npm start
-Visit: http://localhost:3000
-
-🧪 Testing
-bash
-Copy
-Edit
-npm test
-📦 Build
-bash
-Copy
-Edit
-npm run build
